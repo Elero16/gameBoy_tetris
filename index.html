@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тетрис Классика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Левая панель с информацией -->
+        <div class="left-panel">
+            <div class="game-title">
+                <h1>ТЕТРИС</h1>
+                <h2>Классическая игра</h2>
+            </div>
+            
+            <div class="controls">
+                <h3>Управление:</h3>
+                <div class="control-buttons">
+                    <div><span>← →</span> Движение</div>
+                    <div><span>↑</span> Поворот</div>
+                    <div><span>↓</span> Быстрее</div>
+                    <div><span>Пробел</span> Сброс</div>
+                    <div><span>P</span> Пауза</div>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <h3>О игре:</h3>
+                <p>Собирайте линии, чтобы набрать очки</p>
+            </div>
+        </div>
+        
+        <!-- Центральная область с игрой -->
+        <div class="game-area">
+            <canvas id="gameCanvas" width="300" height="540"></canvas>
+        </div>
+        
+        <!-- Правая панель с результатами -->
+        <div class="right-panel">
+            <div class="score-panel">
+                <h3>СЧЁТ:</h3>
+                <div class="current-score" id="currentScore">0</div>
+                
+                <div class="level" id="level">Уровень 1</div>
+                
+                <div class="lines" id="lines">Линии 0</div>
+                
+                <div class="record">
+                    <h3>РЕКОРД:</h3>
+                    <div id="highScore">0</div>
+                </div>
+                
+                <!-- Кнопки управления игрой -->
+                <div class="game-buttons">
+                    <button id="startBtn" class="game-btn start">▶ СТАРТ</button>
+                    <button id="pauseBtn" class="game-btn pause" disabled>⏸ ПАУЗА</button>
+                    <button id="newGameBtn" class="game-btn new">🔄 НОВАЯ ИГРА</button>
+                </div>
+                
+                <!-- Информация о состоянии игры -->
+                <div id="gameStatus" class="game-status">Готов к игре</div>
+            </div>
+            
+            <!-- Следующая фигура -->
+            <div class="next-piece">
+                <h3>СЛЕДУЮЩАЯ:</h3>
+                <canvas id="nextCanvas" width="120" height="120"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
