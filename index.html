@@ -3,66 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Тетрис Классика</title>
+    <title>Тетрис Классика — Адаптивный</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <div class="left-panel">
-            <div class="game-title">
-                <h1>ТЕТРИС</h1>
-                <h2>Classic 2026</h2>
-            </div>
-            <div class="controls">
-                <h3>Управление:</h3>
-                <div class="control-buttons">
-                    <div><span>← →</span> Движение</div>
-                    <div><span>↑</span> Поворот</div>
-                    <div><span>↓</span> Быстрее</div>
-                    <div><span>Пробел</span> Сброс</div>
-                    <div><span>P</span> Пауза</div>
+    <div class="page-wrapper">
+        <div class="game-container">
+            <div class="left-panel">
+                <div class="game-title">
+                    <h1>ТЕТРИС</h1>
+                    <p>Classic Retro</p>
+                </div>
+                <div class="controls-info">
+                    <h3>ПК Управление:</h3>
+                    <ul>
+                        <li><span>↑</span> Поворот</li>
+                        <li><span>← →</span> Движение</li>
+                        <li><span>↓</span> Ускорить</li>
+                        <li><span>Space</span> Сброс</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        
-        <div class="game-area">
-            <canvas id="gameCanvas" width="300" height="600"></canvas>
-            
-            <div class="mobile-controls">
-                <div class="row">
-                    <button class="touch-btn rotate" id="rotateBtn">↻</button>
-                </div>
-                <div class="row">
-                    <button class="touch-btn" id="leftBtn">←</button>
-                    <button class="touch-btn" id="downBtn">↓</button>
-                    <button class="touch-btn" id="rightBtn">→</button>
-                </div>
-                <div class="row">
-                    <button class="touch-btn drop" id="dropBtn">DROP</button>
+
+            <div class="game-area">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                
+                <div class="mobile-controls">
+                    <div class="ctrl-row">
+                        <button class="t-btn rotate" id="rotateBtn">↻</button>
+                    </div>
+                    <div class="ctrl-row">
+                        <button class="t-btn" id="leftBtn">←</button>
+                        <button class="t-btn" id="downBtn">↓</button>
+                        <button class="t-btn" id="rightBtn">→</button>
+                    </div>
+                    <div class="ctrl-row">
+                        <button class="t-btn drop-btn" id="dropBtn">DROP</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="right-panel">
-            <div class="score-panel">
-                <h3>СЧЁТ:</h3>
-                <div class="current-score" id="currentScore">0</div>
-                <div class="level" id="level">Уровень 1</div>
-                <div class="lines" id="lines">Линии 0</div>
-                <div class="record">
-                    <h3>РЕКОРД:</h3>
-                    <div id="highScore">0</div>
+
+            <div class="right-panel">
+                <div class="stat-box">
+                    <div class="label">СЧЁТ</div>
+                    <div id="currentScore" class="value">0</div>
                 </div>
-                <div class="game-buttons">
-                    <button id="startBtn" class="game-btn start">▶ СТАРТ</button>
-                    <button id="pauseBtn" class="game-btn pause" disabled>⏸ ПАУЗА</button>
-                    <button id="newGameBtn" class="game-btn new">🔄 НОВАЯ</button>
+                <div class="stat-box">
+                    <div id="level">Уровень 1</div>
+                    <div id="lines">Линии: 0</div>
                 </div>
-                <div id="gameStatus" class="game-status">Готов</div>
-            </div>
-            <div class="next-piece">
-                <h3>СЛЕДУЮЩАЯ:</h3>
-                <canvas id="nextCanvas" width="120" height="120"></canvas>
+                <div class="next-box">
+                    <p>СЛЕДУЮЩАЯ</p>
+                    <canvas id="nextCanvas" width="100" height="100"></canvas>
+                </div>
+                <div class="action-btns">
+                    <button id="startBtn" class="g-btn start">СТАРТ</button>
+                    <button id="pauseBtn" class="g-btn pause" disabled>ПАУЗА</button>
+                    <button id="newGameBtn" class="g-btn reset">НОВАЯ</button>
+                </div>
+                <div id="gameStatus" class="status-text">Готов</div>
             </div>
         </div>
     </div>
